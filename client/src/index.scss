@@ -1,0 +1,104 @@
+$main-text: #8170F6;
+$side-text: #BEBEBE;
+$highlight: #FFC700;
+$body-text: #414141;
+$body-bg: #FFF;
+@font-face {
+  font-family: 'Geomanist Black';
+  font-style: normal;
+  src: local('Geomanist Black'), url('./fonts/Geomanist-Black-Webfont/geomanist-black-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Geomanist Bold';
+  font-style: normal;
+  src:local('Geomanist Bold'), url('./fonts/Geomanist-Bold-Webfont/geomanist-bold-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Geomanist Book';
+  font-style: normal;
+  src: local('Geomanist Book'), url('./fonts/Geomanist-Book-Webfont/geomanist-book-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Geomanist Extralight';
+  font-style: normal;
+  src: local('Geomanist Extralight'), url('./fonts/Geomanist-ExtraLight-Webfont/geomanist-extralight-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'Geomanist Light';
+  font-style: normal;
+  src: local('Geomanist Light'), url('./fonts/Geomanist-Light-Webfont/geomanist-light-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Geomanist Medium';
+  font-style: normal;
+  src: local('Geomanist Medium'), url('./fonts/Geomanist-Medium-Webfont/geomanist-medium-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Geomanist Regular';
+  font-style: normal;
+  src: local('Geomanist Regular'), url('./fonts/Geomanist-Regular-Webfont/geomanist-regular-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Geomanist Thin';
+  font-style: normal;
+  src: local('Geomanist Thin'), url('./fonts/Geomanist-Thin-Webfont/geomanist-thin-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Geomanist Ultra';
+  font-style: normal;
+  src: local('Geomanist Ultra'), url('./fonts/Geomanist-Ultra-Webfont/geomanist-ultra-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Geomanist Italic';
+  font-style: normal;
+  src: local('Geomanist Italic'), url('./fonts/Geomanist-Regular-Italic-Webfont/geomanist-regular-italic-webfont.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Geomanist Regular', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  background-color: #FAFAFA;
+  color: $body-text;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: "Geomanist Black", sans-serif;
+}
+h2 {
+  font-size: 45px;
+  font-family: "Geomanist Black", sans-serif;
+}
+h3 {
+  font-size: 30px;
+  font-family: "Geomanist Bold", sans-serif;
+}
+h4 {
+  font-size: 25px;
+  font-family: "Geomanist Bold", sans-serif;
+}
+h5 {
+  font-size: 20px;
+  font-family: "Geomanist Regular", sans-serif;
+}
+h6 {
+  font-size: 18px;
+  font-family: "Geomanist Bold", sans-serif;
+}
+.clear {
+  clear: both;
+}
+.content {
+  p {
+    margin-bottom: 20px;
+  }
+}
+.bold {
+  font-family: "Geomanist Medium", sans-serif;
+}
+
+.App {
+  text-align: left;
+}

@@ -5,9 +5,11 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import Header from "./Header";
-import Landing from "./Landing";
-import SurveyNew from "./SurveyNew";
-import Dashboard from "./Dashboard";
+import Landing from "./Landing/Landing";
+import SurveyNew from "./Survey/SurveyNew";
+import Dashboard from "./Dashboard/Dashboard";
+import Footer from "./Footer/Footer";
+import './App.css';
 
 class App extends React.Component {
     componentDidMount() {
@@ -22,6 +24,7 @@ class App extends React.Component {
                         <Route path="/" component={Landing} exact/>
                         <Route path="/surveys/new" component={SurveyNew}/>
                         <Route path="/surveys" component={Dashboard} exact/>
+                        <Footer/>
                     </div>
                 </BrowserRouter>
             </div>

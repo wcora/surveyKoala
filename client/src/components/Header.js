@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
 
 import { connect } from 'react-redux'
+import Stripe from './Stripe/Stripe'
 
 class Header extends React.Component {
     renderContent() {
@@ -14,10 +15,10 @@ class Header extends React.Component {
                 )
             default:
                 return (
-                    <NavDropdown title={"Hi! "+  this.props.auth.googleId } id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <NavDropdown className={"ml-auto"} title={"Hi! "+  this.props.auth.name } id="nav-dropdown__account">
+                        <NavDropdown.Item href="#a">Account</NavDropdown.Item>
+                        <NavDropdown.Item href="#"><Stripe/></NavDropdown.Item>
+                        <NavDropdown.Item href="#">Balance: ${this.props.auth.credit} </NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="/api/logout">Logout</NavDropdown.Item>
                     </NavDropdown>
@@ -28,7 +29,7 @@ class Header extends React.Component {
         console.log(this.props)
         return (
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="/">Survey Koala</Navbar.Brand>
+                <Navbar.Brand href="/">SK</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">

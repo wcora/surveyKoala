@@ -13,9 +13,9 @@ module.exports = app => {
   });
 
   app.get('/api/logout', (req, res) => {
-    req.logout();
+    req.logout(); // need to empty your cookies
     // res.send(req.user);
-    res.redirect('/');
+    res.redirect('/'); // route back to landing is the last step
   });
 
   app.get('/api/current_user', (req, res) => {

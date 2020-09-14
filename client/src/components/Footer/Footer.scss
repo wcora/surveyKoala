@@ -1,0 +1,35 @@
+@import "../../index.scss";
+.Footer {
+  margin-bottom: 30px;
+}
+
+.LogoContainer {
+  display: flex;
+  justify-content: center;
+
+}
+
+.LogoContainer img {
+  height: 30px;
+}
+
+.LogoText {
+  margin: auto 15px;
+}
+
+.SourceContainer {
+  text-align: center;
+}
+
+.Footer .contact {
+  display: inline-flex;
+  margin-top: 0;
+}
+
+.Footer svg{
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+  fill: $side-text;
+}
+
