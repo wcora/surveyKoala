@@ -13,7 +13,15 @@ class SurveyList extends Component {
   }
 
   renderSurveys() {
-
+    if(this.props.surveys.length === 0) {
+      return ( <div className={"empty--message row justify-content-center"}>
+        <p className={"col-lg-3 col-md-5 col-sm-8 text-center"}>
+          Your survey dashboard is empty.
+          <br/>
+          Create your first survey now!
+        </p>
+      </div>)
+    }
     return  [...this.props.surveys].reverse().map(survey => {
       return (
         <div className="card" key={survey._id}>

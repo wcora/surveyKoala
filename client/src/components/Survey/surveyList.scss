@@ -1,5 +1,12 @@
 
 @import "./index.scss";
+
+.empty--message{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: $grey-text;
+}
+
 .card {
   margin-top: 2rem;
   color: $main-text;
