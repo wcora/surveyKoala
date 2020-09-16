@@ -6,7 +6,7 @@
     background: $main-bg;
     border-radius: 10px;
     border: 1px solid $main-shadow;
-    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+    box-shadow: $shadow-default;
 
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -49,27 +49,20 @@
   &--btn{
 
     &__cancel{
+      @include btn-rounded;
       float: left;
-      padding: 0.3rem 1.5rem !important;
-      border-radius: 100px !important;
-      -webkit-transition: 0.5s !important;
-      transition: 0.5s !important;
 
       color: $grey-text !important;
 
-
       &:hover{
         color:$highlight !important;
-        background: $main-shadow;
+        background: $main-shadow !important;
       }
     }
     &__submit{
+      @include btn-rounded;
       float: right;
       margin-right: 15px;
-      padding: 0.3rem 1.5rem !important;
-      border-radius: 100px !important;
-      -webkit-transition: 0.5s !important;
-      transition: 0.5s !important;
 
       color: $body-bg !important;
       background-color: $side-text !important;

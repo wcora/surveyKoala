@@ -1,0 +1,34 @@
+@import "./index.scss";
+.btn{
+  @include btn-rounded;
+
+  &.survey--review--back{
+    @include btn-rounded;
+    float: left;
+
+    color: $grey-text !important;
+
+    &:hover{
+      color:$highlight !important;
+      background: $main-shadow !important;
+    }
+  }
+  &.survey--review--submit{
+
+    float: right;
+    margin-right: 15px;
+
+    color: $body-bg !important;
+    background-color: $side-text !important;
+
+    &:hover{
+      background: $highlight !important;
+    }
+
+  }
+}
+
+.survey--review .survey--form--field {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}

@@ -1,7 +1,25 @@
+@import "./index.scss";
+
+.dashboard{
+  &--title{
+    margin-top: 3rem;
+  }
+}
+
+.btn-start-new{
+  @include btn-rounded;
+  background-color: $main-bg !important;
+  &:hover{
+    color:$highlight !important;
+    background: $main-shadow !important;
+  }
+}
+
 .btn-circle{
   position: fixed;
   bottom:2rem;
   right:2rem;
+  background-color: white !important;
   box-shadow: 0 0 10px 3px rgba(0,0,0,0.1);
 }
 

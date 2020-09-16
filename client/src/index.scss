@@ -9,6 +9,10 @@ $body-text: #414141;
 $body-bg: #FFF;
 $main-shadow: #F2EBE3;
 
+$shadow-default:0 0 20px 0 rgba(0,0,0,0.1);
+
+@import "./mixin.scss";
+
 @font-face {
   font-family: 'Geomanist Black';
   font-style: normal;

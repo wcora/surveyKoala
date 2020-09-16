@@ -1,0 +1,49 @@
+
+@import "./index.scss";
+.card {
+  margin-top: 2rem;
+  color: $main-text;
+  background: $main-bg !important;
+  border-radius: 10px;
+  border: 1px solid $main-shadow;
+  box-shadow: $shadow-default;
+
+  &-header {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-left: 0 !important;
+    background-color: rgba(0,0,0,0) !important;
+    color: $grey-text;
+    font-size: 0.8rem;
+  }
+  &-title{
+  }
+  h6{
+    padding-top: 1rem;
+  }
+  &-text{
+    font-size: 0.8rem;
+  }
+
+  &-action {
+    .col-6 {
+      text-align: center;
+    }
+    padding-top: 1rem;
+    a {
+      font-family: "Geomanist Black", sans-serif;
+      font-size: 2rem;
+    }
+  }
+  .btn{
+    @include btn-rounded;
+    margin-top: 1rem;
+    float: right;
+    color: $body-bg !important;
+    background-color: $side-text !important;
+
+    &:hover{
+      background: $highlight !important;
+    }
+  }
+}

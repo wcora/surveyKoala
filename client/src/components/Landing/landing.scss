@@ -1,8 +1,79 @@
+@import './index.scss';
+
 .landing {
   width: 100%;
+  height: 100%;
   padding-top: 20%;
   padding-bottom: 20%;
-  h1 {
-    font-size: 5rem;
+  .container{
+    z-index: 11;
+    h1 {
+      font-size: 5rem;
+    }
+    .btn{
+      @include btn-rounded;
+      background-color: $side-text;
+      color: white;
+      &:hover{
+        background-color: $highlight !important;
+      }
+    }
   }
+  section {
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 20%;
+    background-color: #fbb894;
+
+    .wave{
+      position: absolute;
+      bottom: 0;
+      left: -100px;
+      width: 100px;
+      height: 100%;
+      background-size: 100px 1000px;
+
+      &.wave1{
+        animation: animate 4s linear infinite;
+        opacity: 1;
+        animation-delay: 0s;
+        z-index: 10;
+        right: 0;
+      }
+      &.wave2{
+        animation: animate2 2s linear infinite;
+        opacity: 0.3;
+        animation-delay: -5s;
+        z-index: 9;
+        right: 15px;
+      }
+      &.wave3{
+        animation: animate 3s linear infinite;
+        opacity: 0.2;
+        animation-delay: -2s;
+        z-index: 8;
+        right: 30px;
+      }
+      &.wave4{
+        animation: animate2 2s linear infinite;
+        opacity: 0.5;
+        animation-delay: -4s;
+        z-index: 7;
+        right: 45px;
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% { background-position-y: 0;}
+  100% { background-position-y: 1000px;}
+}
+
+@keyframes animate2 {
+  0% { background-position-y: 0;}
+  100% { background-position-y: -1000px;}
 }

@@ -36,6 +36,7 @@ class Header extends React.Component {
                         <Nav.Link href="/">Home</Nav.Link>
                         <NavDropdown title="Surveys" id="basic-nav-dropdown">
                             <NavDropdown.Item href="/surveys">View Survey Dashboard</NavDropdown.Item>
+                            <NavDropdown.Divider />
                             <NavDropdown.Item href="/surveys/new">Create New Survey</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>

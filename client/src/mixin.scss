@@ -1,0 +1,7 @@
+@mixin btn-rounded {
+  padding: 0.3rem 1.5rem !important;
+  border-radius: 100px !important;
+
+  -webkit-transition: 0.5s !important;
+  transition: 0.5s !important;
+}

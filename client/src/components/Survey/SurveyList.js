@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSurveys, deleteSurvey } from '../../actions';
 
+import './surveyList.scss'
 class SurveyList extends Component {
   constructor(props) {
     super(props);
@@ -21,14 +22,25 @@ class SurveyList extends Component {
             {new Date(survey.dateSent).toLocaleDateString()}
           </div>
           <div className="card-body">
-            <h5 className="card-title">{survey.title}</h5>
+            <h4 className="card-title">{survey.title}</h4>
             <h6 className="card-subtitle mb-2 text-muted">Survey Subject: {survey.subject}</h6>
-            <p className="card-text"></p>
-            <div className="card-action">
-                <a>Yes: {survey.yes}</a> &nbsp;
-                <a>No: {survey.no}</a>
+            <p className="card-text">
+              {survey.body}
+            </p>
+            <div className="card-action row">
+              <div className="col-6">
+                <h5>Agree</h5>
+                <a> {survey.yes}</a>
+              </div>
+              <div className="col-6">
+                <h5>Disagree</h5>
+                <a>{survey.no}</a>
+              </div>
             </div>
-            <div className="btn btn-danger" onClick={this.props.deleteSurvey.bind(this, survey._id)}>Delete Survey</div>
+            <div className="btn"
+                 onClick={this.props.deleteSurvey.bind(this, survey._id)}>
+              Archive
+            </div>
           </div>
         </div>
       );
