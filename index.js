@@ -1,12 +1,18 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
+
+// import Mongoose models
 require('./models/User');
+require('./models/Survey')
+
+// start mongoose
+require('./db/mongoose')
+
+// import auth module
 require('./services/passport');
 
-require('./db/mongoose')
 
 const bodyParser = require('body-parser')
 
@@ -22,10 +28,14 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+// setup route files || can also use new express.Router()
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 
+// setup for heroku deploy
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
     const path = require('path');

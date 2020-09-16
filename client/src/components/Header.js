@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 import { connect } from 'react-redux'
 import Stripe from './Stripe/Stripe'
@@ -16,7 +16,7 @@ class Header extends React.Component {
             default:
                 return (
                     <NavDropdown className={"ml-auto"} title={"Hi! "+  this.props.auth.name } id="nav-dropdown__account">
-                        <NavDropdown.Item href="#a">Account</NavDropdown.Item>
+                        <NavDropdown.Item href="/surveys">Account</NavDropdown.Item>
                         <NavDropdown.Item href="#"><Stripe/></NavDropdown.Item>
                         <NavDropdown.Item href="#">Balance: ${this.props.auth.credit} </NavDropdown.Item>
                         <NavDropdown.Divider />
@@ -35,11 +35,8 @@ class Header extends React.Component {
                     <Nav className="mr-auto">
                         <Nav.Link href="/">Home</Nav.Link>
                         <NavDropdown title="Surveys" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                            <NavDropdown.Item href="/surveys">View Survey Dashboard</NavDropdown.Item>
+                            <NavDropdown.Item href="/surveys/new">Create New Survey</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     {this.renderContent()}

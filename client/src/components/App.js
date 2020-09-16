@@ -9,7 +9,7 @@ import Landing from "./Landing/Landing";
 import SurveyNew from "./Survey/SurveyNew";
 import Dashboard from "./Dashboard/Dashboard";
 import Footer from "./Footer/Footer";
-import './App.css';
+import './App.scss';
 
 class App extends React.Component {
     componentDidMount() {

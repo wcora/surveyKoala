@@ -5,9 +5,9 @@ const stripe = require('stripe')(keys.stripeSecret);
 module.exports = app => {
     app.post('/api/stripe', auth, async (req, res) => {
         const charge = await stripe.charges.create({
-            amount: 50,
+            amount: 500,
             currency: 'usd',
-            description: '$0.50 for sending survey',
+            description: '$5 for sending a survey!',
             source: req.body.id
         });
         // this logic assumes user is logged in, so need to check auth before this part

@@ -13,6 +13,12 @@ import * as serviceWorker from './serviceWorker';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
+
+import axios from 'axios';
+window.axios = axios;
+
+
+
 const store = createStore(
     reducers, // dummy reducer
     {}, // for our app we dont have initial state to load so empty object will do the work

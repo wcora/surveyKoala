@@ -31,7 +31,7 @@ passport.use(
                 return done(null, existingUser);
             }
             // we don't have a user record with this ID, make a new record!
-            const user = await new User({ googleId: profile.id, name: profile.displayName });
+            const user = await new User({ googleId: profile.id, name: profile.displayName || "" });
             user.save();
             done(null, user);
         } catch (e) {

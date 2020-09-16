@@ -1,0 +1,84 @@
+@import "./index.scss";
+.survey{
+  margin-top: 2rem;
+  &--form {
+    color: $main-text;
+    background: $main-bg;
+    border-radius: 10px;
+    border: 1px solid $main-shadow;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    h3 {
+      padding-left: 15px;
+    }
+    &--field{
+      padding-left: 15px;
+      padding-right: 15px;
+      label {
+        width: 100%;
+        font-size: 0.9rem;
+      }
+      input, textarea{
+        box-sizing: border-box;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+
+        width: 100%;
+        margin: 8px 0;
+        padding: 12px 20px;
+        height: 2.5rem;
+
+        background: $main-bg;
+        border: 1px solid rgba($side-text, 0.75);
+        &:focus {
+          border: 3px solid rgba($highlight, 0.5);
+        }
+      }
+      &__body textarea {
+        height: 8rem;
+      }
+      p {
+        color: $highlight;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  &--btn{
+
+    &__cancel{
+      float: left;
+      padding: 0.3rem 1.5rem !important;
+      border-radius: 100px !important;
+      -webkit-transition: 0.5s !important;
+      transition: 0.5s !important;
+
+      color: $grey-text !important;
+
+
+      &:hover{
+        color:$highlight !important;
+        background: $main-shadow;
+      }
+    }
+    &__submit{
+      float: right;
+      margin-right: 15px;
+      padding: 0.3rem 1.5rem !important;
+      border-radius: 100px !important;
+      -webkit-transition: 0.5s !important;
+      transition: 0.5s !important;
+
+      color: $body-bg !important;
+      background-color: $side-text !important;
+
+      &:hover{
+        background: $highlight !important;
+      }
+
+    }
+  }
+}
+

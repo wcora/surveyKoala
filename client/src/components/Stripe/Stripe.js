@@ -6,11 +6,11 @@ class Stripe extends Component {
     render() {
         return (
             <StripeCheckout
-                amount={50}
+                amount={500}
                 token={token => this.props.handleToken(token)}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
                 name={"SurveyKoala"}
-                description={"$0.50 for 5 survey credits!"}
+                description={"$5.0 for 5 survey credits!"}
             >
                 Add Credits
             </StripeCheckout>

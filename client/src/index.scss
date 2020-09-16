@@ -1,8 +1,14 @@
-$main-text: #8170F6;
-$side-text: #BEBEBE;
-$highlight: #FFC700;
+$main-text: #515070;
+$main-bg: #f8f8f8;
+$side-text: #ffbb91;
+$highlight: #ff8e6e;
+
+$grey-text: #a0a0a0;
+
 $body-text: #414141;
 $body-bg: #FFF;
+$main-shadow: #F2EBE3;
+
 @font-face {
   font-family: 'Geomanist Black';
   font-style: normal;
@@ -60,7 +66,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   background-color: #FAFAFA;
-  color: $body-text;
+  color: $main-text;
 }
 
 h1 {
