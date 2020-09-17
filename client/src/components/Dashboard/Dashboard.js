@@ -12,7 +12,9 @@ class Dashboard extends React.Component {
                     <p className="col-12">View all surveys you've sent out in the past and user responses.</p>
                     <div className="col-12 ml-auto">
 
-                        <div className="btn btn-start-new">
+                        <div to="/surveys/new"
+                              type=""
+                              className="btn btn-start-new">
                             Start a new survey
                         </div>
                     </div>
