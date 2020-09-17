@@ -24,4 +24,13 @@ Major dependencies used:
 
 ```url, body-parser``` - for cleaning up messy json response and parsing url from API calls
 
-The app is available at [SurveyKoala](https://surveykoala.herokuapp.com)
+#### Demo
+![Demo](./demo/demo.gif)
+
+The app is available at [SurveyKoala](https://surveykoala.herokuapp.com) for testing.
+
+
+#####Notes:
+* Because this is a fun personal side project for me, the email address I listed as the sender's email is currently my personal email account. 
+Therefore, I deactivated the payment feature in order to avoid abused usage. Watch the demo to learn how it works!
+* The test version of Stripe API which won't really charge any money. 
