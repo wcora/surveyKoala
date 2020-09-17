@@ -8,6 +8,7 @@ import Header from "./Header";
 import Landing from "./Landing/Landing";
 import SurveyNew from "./Survey/SurveyNew";
 import Dashboard from "./Dashboard/Dashboard";
+import About from "./About/About"
 import Footer from "./Footer/Footer";
 import './App.scss';
 
@@ -24,6 +25,7 @@ class App extends React.Component {
                         <Route path="/" component={Landing} exact/>
                         <Route path="/surveys/new" component={SurveyNew}/>
                         <Route path="/surveys" component={Dashboard} exact/>
+                        <Route path="/about" component={About} exact/>
                         <Footer/>
                     </div>
                 </BrowserRouter>

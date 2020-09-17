@@ -28,6 +28,24 @@ class Header extends React.Component {
                 )
         }
     }
+
+    renderSurveys() {
+        switch (this.props.auth) {
+            case null:
+                return;
+            case false:
+                return;
+            default:
+                return (
+                    <NavDropdown title="Surveys" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="/surveys">View Survey Dashboard</NavDropdown.Item>
+                        <NavDropdown.Divider/>
+                        <NavDropdown.Item href="/surveys/new">Create New Survey</NavDropdown.Item>
+                    </NavDropdown>
+                )
+
+        }
+    }
     render() {
         // console.log(this.props)
         return (
@@ -37,11 +55,8 @@ class Header extends React.Component {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link href="/">Home</Nav.Link>
-                        <NavDropdown title="Surveys" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/surveys">View Survey Dashboard</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="/surveys/new">Create New Survey</NavDropdown.Item>
-                        </NavDropdown>
+                        {this.renderSurveys()}
+                        <Nav.Link href="/about">About</Nav.Link>
                     </Nav>
                     {this.renderContent()}
                     {/*<Form inline>*/}
