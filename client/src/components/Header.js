@@ -15,18 +15,21 @@ class Header extends React.Component {
                 )
             default:
                 return (
-                    <NavDropdown className={"ml-auto"} title={"Hi! "+  this.props.auth.name } id="nav-dropdown__account">
-                        <NavDropdown.Item href="/surveys">Account</NavDropdown.Item>
-                        <NavDropdown.Item href="#"><Stripe/></NavDropdown.Item>
-                        <NavDropdown.Item href="#">Balance: ${this.props.auth.credit} </NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="/api/logout">Logout</NavDropdown.Item>
-                    </NavDropdown>
+                    <div style={{"display" : "inline-flex"}}>
+                        <Nav.Link href="#" style={{"color" : "#a0a0a0"}}>Balance: ${this.props.auth.credit} </Nav.Link>
+                        <NavDropdown className={"ml-auto"} title={"Hi! "+  this.props.auth.name } id="nav-dropdown__account">
+                            <NavDropdown.Item href="/surveys">Account</NavDropdown.Item>
+                            <NavDropdown.Item href="#"><Stripe/></NavDropdown.Item>
+                            <NavDropdown.Item href="#">Balance: ${this.props.auth.credit} </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="/api/logout">Logout</NavDropdown.Item>
+                        </NavDropdown>
+                    </div>
                 )
         }
     }
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <Navbar bg="light" expand="lg">
                 <Navbar.Brand href="/">SK</Navbar.Brand>

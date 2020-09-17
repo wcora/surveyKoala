@@ -10,7 +10,7 @@ class Stripe extends Component {
                 token={token => this.props.handleToken(token)}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
                 name={"SurveyKoala"}
-                description={"$5.0 for 5 survey credits! Because I'm only building this application for fun, I implemented the test version of Stripe. As a result, it won't really charge you anything."}
+                description={"$5.0 for 5 survey credits!"}
             >
                 Add Credits
             </StripeCheckout>

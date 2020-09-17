@@ -8,9 +8,9 @@
 }
 
 .btn-start-new{
-
   @include btn-rounded;
   background-color: $main-bg !important;
+  -webkit-appearance: none;
   &:hover{
     color:$highlight !important;
     background: $main-shadow !important;

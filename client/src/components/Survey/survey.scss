@@ -10,8 +10,12 @@
 
     padding-top: 2rem;
     padding-bottom: 2rem;
-    h3 {
+    h3, p {
       padding-left: 15px;
+    }
+    p{
+      padding-bottom: 1rem;
+      color: $grey-text;
     }
     &--field{
       padding-left: 15px;

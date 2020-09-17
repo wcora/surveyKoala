@@ -27,6 +27,7 @@ class SurveyForm extends React.Component {
                 <form className={"survey--form col-lg-6 col-md-8 col-sm-10"}
                       onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
                     <h3>New Survey Form</h3>
+                    <p>Make sure you have at least $1 in your balance to send out this survey!</p>
                     { this.renderFields() }
                     <div className="survey--btn">
                         <Link to={"/surveys"} className={"btn survey--btn__cancel"}> Cancel </Link>
