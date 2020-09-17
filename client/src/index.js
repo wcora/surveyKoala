@@ -13,10 +13,10 @@ import * as serviceWorker from './serviceWorker';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
-
-import axios from 'axios';
-window.axios = axios;
-
+//
+// import axios from 'axios';
+// window.axios = axios;
+//
 
 
 const store = createStore(
