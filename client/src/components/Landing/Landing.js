@@ -43,6 +43,9 @@ class Landing extends React.Component {
                             Collect feedback from your users.
                         </p>
                         {this.renderButton()}
+                        <div className="btn landing--btn demo">
+                            <a href="https://github.com/wcora/surveyKoala" target="_blank">Documentation</a>
+                        </div>
                     </div>
                 </div>
                 <section className="wave--container">

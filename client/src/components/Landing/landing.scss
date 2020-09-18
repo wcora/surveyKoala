@@ -17,9 +17,16 @@
       -webkit-appearance: none;
       @include btn-rounded;
       background-color: $side-text;
-      color: white;
+      color: white !important;
       &:hover{
         background-color: $highlight !important;
+      }
+      &.demo {
+        margin-left: 15px;
+        a {
+          text-decoration: none !important;
+          color: white !important;
+        }
       }
     }
   }
