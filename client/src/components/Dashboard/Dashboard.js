@@ -27,7 +27,7 @@ class Dashboard extends React.Component {
                 </div>
                 <div className="dashboard--surveys__new">
                     <Link to="/surveys/new"
-                          type="button"
+                          type="b"
                           className="btn btn-circle btn-md">
                         <span>+</span>
                     </Link>
